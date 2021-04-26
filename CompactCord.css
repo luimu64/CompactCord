@@ -1,0 +1,221 @@
+:root {
+    --animation-speed: 0.5s;
+    --search-in-friendlist: none; /* none or flex */
+    --bar-opacity: 0.7;
+    --background-opacity: 0.6;
+}
+
+/*member list*/
+
+.membersWrap-2h-GB4.hiddenMembers-2dcs_q {
+    background-color: rgba(0,0,0, var(--bar-opacity));
+    min-width: unset;
+    width: 50px;
+    padding-left: 0px;
+    justify-content: right;
+    transition: width var(--animation-speed);
+}
+
+.membersGroup-v9BXpm.container-2ax-kl {
+    animation: member-list-header-minimize var(--animation-speed) ease-out;
+    height: 0px;
+    padding: 0px;
+}
+
+.membersWrap-2h-GB4.hiddenMembers-2dcs_q:hover .membersGroup-v9BXpm.container-2ax-kl {
+    animation: member-list-header-expand calc(var(--animation-speed)) ease-in;
+    height: 16px;
+    padding: 24px;
+}
+
+@keyframes member-list-header-expand {
+    from {
+        height: 0px;
+        padding: 0px;
+    } to {
+        height: 16px;
+        padding: 24px;
+    }
+}
+
+@keyframes member-list-header-minimize {
+    from {
+        height: 16px;
+        padding: 24px;
+    } to {
+        height: 0px;
+        padding: 0px;
+    }
+}
+
+.member-3-YXUe {
+    margin-left: 0px;
+}
+
+.membersWrap-2h-GB4.hiddenMembers-2dcs_q:hover {
+    width: 240px;
+}
+
+/*chat input field */
+
+.form-2fGMdU {
+    padding: 0px;
+}
+
+.channelTextArea-rNsIhG.channelTextArea-2VhZ6z,
+.scrollableContainer-2NUZem.webkit-HjD9Er
+{
+    border-radius: 0;
+}
+
+.chat-3bRxxu, 
+.threadSidebar-1o3BTy, 
+.content-yTz4x3
+{
+    background: none !important;
+}
+
+.chatContent-a9vAAp {
+    background: rgba(0,0,0,var(--background-opacity));
+}
+
+/*extend top bar on top of channel list*/
+
+.title-3qD0b-, .container-1r6BKw
+{
+    background: rgba(0,0,0, var(--bar-opacity)) !important;
+    width: calc(100% + 50px);
+    margin-left: -50px;
+    transition: margin-left var(--animation-speed), width var(--animation-speed);
+}
+
+.sidebar-2K8pFh:hover ~ .chat-3bRxxu .title-3qD0b-.container-1r6BKw,
+.sidebar-2K8pFh:hover ~ .container-1D34oG .container-1r6BKw
+{
+    margin-left: -240px;
+    width: calc(100% + 240px);
+}
+
+.chat-3bRxxu {
+    overflow: unset;
+}
+
+.children-19S4PO {
+    margin: 0px;
+}
+
+.children-19S4PO:after {
+    display: none;
+}
+
+.container-1D34oG {
+    overflow: visible;
+}
+
+/* home page */
+
+.tabBody-3YRQ8W {
+    background: rgba(0,0,0,var(--background-opacity));
+}
+
+.container-1D34oG {
+    background-color: rgba(0,0,0,0) !important;
+}
+
+/*friend list*/
+
+.content-3YMskv a {
+    margin-left: 0;
+}
+
+.privateChannelsHeaderContainer-3NB1K1 {
+    padding-left: 15px;
+}
+
+.privateChannelRecipientsInviteButtonIcon-3A3uTc[aria-label="Create DM"] {
+    margin-right: 4px;
+}
+
+.searchBar-6Kv8R2 {
+    display: var(--search-in-friendlist);
+}
+
+/* channel list */
+
+.sidebar-2K8pFh {
+    background: rgba(0,0,0, var(--bar-opacity)) !important;
+    margin-top: 48px;
+    min-width: unset;
+    width: 50px;
+    padding-left: 0px;
+    justify-content: right;
+    transition: width var(--animation-speed);
+}
+.sidebar-2K8pFh:hover {
+    width: 240px;
+}
+
+.containerDefault-3tr_sE {
+    overflow: hidden;
+    height: 0px;
+    padding: 0px;
+    animation-name: channel-list-header-minimize;
+    animation-duration: var(--animation-speed);
+}
+
+.sidebar-2K8pFh:hover .containerDefault-3tr_sE {
+    height: 24px;
+    padding: 16px;
+    animation-name: channel-list-header-expand;
+    animation-duration: var(--animation-speed);
+}
+
+@keyframes channel-list-header-expand {
+    from {
+        height: 0;
+        padding: 0;
+    } to {
+        height: 24px;
+        padding: 16px;
+    }
+}
+
+@keyframes channel-list-header-minimize {
+    from {
+        height: 24px;
+        padding: 16px;
+    } to {
+        height: 0;
+        padding: 0;
+    }
+}
+
+.button-1w5pas {
+    margin-left: 0px;
+    padding-right: 4px;
+}
+
+.sidebar-2K8pFh:hover .children-3rEycc {
+    display: block;
+}
+
+
+/*padding so text below buttons are properly overlayed*/
+
+.actions-aUdUfC button[aria-label="Stop Streaming"],
+.wrapper-24pKcD button[aria-label="Disconnect"]
+{
+    width: unset;
+    height: unset;
+    padding-left: 5px;
+}
+
+.children-3rEycc,
+.icon-3Oovq9,
+.bannerImage-3KhIJ6,
+.animatedContainer-1NSq4T,
+.content-3YMskv > div[style="height: 84px;"],
+.content-3YMskv > div[style="height: 16px;"]
+{
+    display: none;
+}
