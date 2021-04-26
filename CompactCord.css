@@ -1,14 +1,22 @@
 :root {
     --animation-speed: 0.5s;
     --search-in-friendlist: none; /* none or flex */
-    --bar-opacity: 0.7;
-    --background-opacity: 0.6;
+    --bar-color: rgba(0, 0, 0, 0.8);
+    --background-color: rgba(0, 0, 0, 0.397);
+    --serverlist-background-color: var(--bar-color);
+    --input-field-background-color: var(--bar-color);
+}
+
+/* server list background */
+
+.scroller-1Bvpku {
+    background-color: var(--serverlist-background-color) !important;
 }
 
 /*member list*/
 
 .membersWrap-2h-GB4.hiddenMembers-2dcs_q {
-    background-color: rgba(0,0,0, var(--bar-opacity));
+    background-color: var(--bar-color) !important;
     min-width: unset;
     width: 50px;
     padding-left: 0px;
@@ -58,6 +66,12 @@
 
 /*chat input field */
 
+.channelTextArea-rNsIhG {
+    background-color: var(--input-field-background-color);
+    margin-bottom: 0;
+    padding-bottom: 24px;
+}
+
 .form-2fGMdU {
     padding: 0px;
 }
@@ -68,22 +82,18 @@
     border-radius: 0;
 }
 
-.chat-3bRxxu, 
-.threadSidebar-1o3BTy, 
-.content-yTz4x3
-{
-    background: none !important;
-}
+/* message background */
 
 .chatContent-a9vAAp {
-    background: rgba(0,0,0,var(--background-opacity));
+    background: var(--background-color);
 }
 
 /*extend top bar on top of channel list*/
 
 .title-3qD0b-, .container-1r6BKw
 {
-    background: rgba(0,0,0, var(--bar-opacity)) !important;
+    outline-style: none;
+    background: var(--bar-color) !important;
     width: calc(100% + 50px);
     margin-left: -50px;
     transition: margin-left var(--animation-speed), width var(--animation-speed);
@@ -143,7 +153,7 @@
 /* channel list */
 
 .sidebar-2K8pFh {
-    background: rgba(0,0,0, var(--bar-opacity)) !important;
+    background: var(--bar-color) !important;
     margin-top: 48px;
     min-width: unset;
     width: 50px;
@@ -151,6 +161,7 @@
     justify-content: right;
     transition: width var(--animation-speed);
 }
+
 .sidebar-2K8pFh:hover {
     width: 240px;
 }
@@ -197,6 +208,20 @@
 
 .sidebar-2K8pFh:hover .children-3rEycc {
     display: block;
+}
+
+
+/* removing various backgrounds to recolor them */
+.chat-3bRxxu, 
+.threadSidebar-1o3BTy, 
+.content-yTz4x3,
+.container-3w7J-x,
+.panels-j1Uci_,
+.privateChannels-1nO12o, .searchBar-6Kv8R2,
+.scroller-1JbKMe,
+.members-1998pB, .members-1998pB>div
+{
+    background: none !important;
 }
 
 
