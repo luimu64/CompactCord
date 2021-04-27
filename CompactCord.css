@@ -1,37 +1,37 @@
 :root {
-    --animation-speed: 0.5s;
-    --search-in-friendlist: none; /* none or flex */
-    --bar-color: rgba(0, 0, 0, 0.8);
-    --background-color: rgba(0, 0, 0, 0.397);
-    --serverlist-background-color: var(--bar-color);
-    --input-field-background-color: var(--bar-color);
+    --CC-animation-speed: 0.8s;
+    --CC-search-in-friendlist: none; /* none or flex */
+    --CC-bar-color: rgba(0, 0, 0, 0.8);
+    --CC-background-color: rgba(0, 0, 0, 0.397);
+    --CC-serverlist-background-color: var(--CC-bar-color);
+    --CC-input-field-background-color: var(--CC-bar-color);
 }
 
 /* server list background */
 
 .scroller-1Bvpku {
-    background-color: var(--serverlist-background-color) !important;
+    background-color: var(--CC-serverlist-background-color) !important;
 }
 
 /*member list*/
 
 .membersWrap-2h-GB4.hiddenMembers-2dcs_q {
-    background-color: var(--bar-color) !important;
+    background-color: var(--CC-bar-color) !important;
     min-width: unset;
     width: 50px;
     padding-left: 0px;
     justify-content: right;
-    transition: width var(--animation-speed);
+    transition: width var(--CC-animation-speed);
 }
 
 .membersGroup-v9BXpm.container-2ax-kl {
-    animation: member-list-header-minimize var(--animation-speed) ease-out;
+    animation: member-list-header-minimize var(--CC-animation-speed) ease-out;
     height: 0px;
     padding: 0px;
 }
 
 .membersWrap-2h-GB4.hiddenMembers-2dcs_q:hover .membersGroup-v9BXpm.container-2ax-kl {
-    animation: member-list-header-expand calc(var(--animation-speed)) ease-in;
+    animation: member-list-header-expand calc(var(--CC-animation-speed)) ease-in;
     height: 16px;
     padding: 24px;
 }
@@ -67,7 +67,7 @@
 /*chat input field */
 
 .channelTextArea-rNsIhG {
-    background-color: var(--input-field-background-color);
+    background-color: var(--CC-input-field-background-color);
     margin-bottom: 0;
     padding-bottom: 24px;
 }
@@ -85,22 +85,25 @@
 /* message background */
 
 .chatContent-a9vAAp {
-    background: var(--background-color);
+    background: var(--CC-background-color);
 }
 
 /*extend top bar on top of channel list*/
 
-.title-3qD0b-, .container-1r6BKw
+.title-3qD0b-,
+.container-1r6BKw,
+.libraryHeader-3g95kE
 {
-    outline-style: none;
-    background: var(--bar-color) !important;
+    background: var(--CC-bar-color) !important;
     width: calc(100% + 50px);
     margin-left: -50px;
-    transition: margin-left var(--animation-speed), width var(--animation-speed);
+    transition: margin-left var(--CC-animation-speed), width var(--CC-animation-speed);
 }
 
 .sidebar-2K8pFh:hover ~ .chat-3bRxxu .title-3qD0b-.container-1r6BKw,
-.sidebar-2K8pFh:hover ~ .container-1D34oG .container-1r6BKw
+.sidebar-2K8pFh:hover ~ .container-1D34oG .container-1r6BKw,
+.sidebar-2K8pFh:hover ~ .container-3Mxszk .libraryHeader-3g95kE,
+.sidebar-2K8pFh:hover ~ .applicationStore-1pNvnv .headerBar-1YYOfi
 {
     margin-left: -240px;
     width: calc(100% + 240px);
@@ -118,18 +121,37 @@
     display: none;
 }
 
-.container-1D34oG {
+.container-1D34oG,
+.container-3Mxszk,
+.applicationStore-1pNvnv
+{
     overflow: visible;
 }
 
 /* home page */
 
 .tabBody-3YRQ8W {
-    background: rgba(0,0,0,var(--background-opacity));
+    background: var(--CC-background-color);
 }
 
 .container-1D34oG {
     background-color: rgba(0,0,0,0) !important;
+}
+
+/* library page */
+
+.container-19hC9u {
+    background: var(--CC-background-color);
+}
+
+.header-39GIC8 {
+    background: none;
+}
+
+/* nitro page */
+
+.scroller-9moviB {
+    background-color: var(--CC-background-color);
 }
 
 /*friend list*/
@@ -147,19 +169,19 @@
 }
 
 .searchBar-6Kv8R2 {
-    display: var(--search-in-friendlist);
+    display: var(--CC-search-in-friendlist);
 }
 
 /* channel list */
 
 .sidebar-2K8pFh {
-    background: var(--bar-color) !important;
+    background: var(--CC-bar-color) !important;
     margin-top: 48px;
     min-width: unset;
     width: 50px;
     padding-left: 0px;
     justify-content: right;
-    transition: width var(--animation-speed);
+    transition: width var(--CC-animation-speed);
 }
 
 .sidebar-2K8pFh:hover {
@@ -171,14 +193,14 @@
     height: 0px;
     padding: 0px;
     animation-name: channel-list-header-minimize;
-    animation-duration: var(--animation-speed);
+    animation-duration: var(--CC-animation-speed);
 }
 
 .sidebar-2K8pFh:hover .containerDefault-3tr_sE {
     height: 24px;
     padding: 16px;
     animation-name: channel-list-header-expand;
-    animation-duration: var(--animation-speed);
+    animation-duration: var(--CC-animation-speed);
 }
 
 @keyframes channel-list-header-expand {
@@ -210,8 +232,8 @@
     display: block;
 }
 
-
 /* removing various backgrounds to recolor them */
+
 .chat-3bRxxu, 
 .threadSidebar-1o3BTy, 
 .content-yTz4x3,
