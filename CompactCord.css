@@ -1,8 +1,8 @@
 :root {
     --CC-animation-speed: 0.8s;
     --CC-search-in-friendlist: none; /* none or flex */
-    --CC-bar-color: rgba(0, 0, 0, 0.8);
-    --CC-background-color: rgba(0, 0, 0, 0.397);
+    --CC-bar-color: hsla(327, 50%, 45%, 0.6);
+    --CC-background-color: hsla(327, 50%, 20%, 0.5);
     --CC-serverlist-background-color: var(--CC-bar-color);
     --CC-input-field-background-color: var(--CC-bar-color);
 }
@@ -11,6 +11,10 @@
 
 .scroller-1Bvpku {
     background-color: var(--CC-serverlist-background-color) !important;
+}
+
+* {
+    color: #FFFFFF;
 }
 
 /*member list*/
@@ -82,9 +86,17 @@
     border-radius: 0;
 }
 
+.scrollableContainer-2NUZem {
+    background-color: inherit;
+}
+
+.scrollerSpacer-avRLaA {
+    height: 10px;
+}
+
 /* message background */
 
-.chatContent-a9vAAp {
+.messagesWrapper-1sRNjr {
     background: var(--CC-background-color);
 }
 
@@ -241,11 +253,11 @@
 .panels-j1Uci_,
 .privateChannels-1nO12o, .searchBar-6Kv8R2,
 .scroller-1JbKMe,
-.members-1998pB, .members-1998pB>div
+.members-1998pB, .members-1998pB>div,
+.applicationStore-1pNvnv
 {
     background: none !important;
 }
-
 
 /*padding so text below buttons are properly overlayed*/
 
