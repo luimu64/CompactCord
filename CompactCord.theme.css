@@ -1,8 +1,10 @@
+
 :root {
     --CC-animation-speed: 0.8s;
     --CC-search-in-friendlist: none; /* none or flex */
     --CC-bar-color: hsla(327, 50%, 45%, 0.6);
     --CC-background-color: hsla(327, 50%, 20%, 0.5);
+    --CC-text-color: rgb(255, 255, 255);
     --CC-serverlist-background-color: var(--CC-bar-color);
     --CC-input-field-background-color: var(--CC-bar-color);
 }
@@ -13,8 +15,10 @@
     background-color: var(--CC-serverlist-background-color) !important;
 }
 
-* {
-    color: #FFFFFF;
+/* member card */
+
+.userPopout-3XzG_A {
+    background-color: hsl(var(--CC-bar-color));
 }
 
 /*member list*/
@@ -98,6 +102,10 @@
 
 .messagesWrapper-1sRNjr {
     background: var(--CC-background-color);
+}
+
+.scroller-2LSbBU::-webkit-scrollbar {
+    background-color: var(--CC-background-color);
 }
 
 /*extend top bar on top of channel list*/
@@ -254,7 +262,10 @@
 .privateChannels-1nO12o, .searchBar-6Kv8R2,
 .scroller-1JbKMe,
 .members-1998pB, .members-1998pB>div,
-.applicationStore-1pNvnv
+.applicationStore-1pNvnv,
+.headerNormal-T_seeN,
+.body-3iLsc4,
+.footer-1fjuF6
 {
     background: none !important;
 }
