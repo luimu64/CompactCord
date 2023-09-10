@@ -2,8 +2,8 @@
 :root {
     --CC-animation-speed: 0.8s;
     --CC-search-in-friendlist: none; /* none or flex */
-    --CC-bar-color: hsla(327, 50%, 45%, 0.6);
-    --CC-background-color: hsla(327, 50%, 20%, 0.5);
+    --CC-bar-color: hsl(0, 0%, 5%);
+    --CC-background-color: hsl(0, 0%, 1%);
     --CC-text-color: rgb(255, 255, 255);
     --CC-serverlist-background-color: var(--CC-bar-color);
     --CC-input-field-background-color: var(--CC-bar-color);
@@ -11,108 +11,119 @@
 
 /* server list background */
 
-.scroller-1Bvpku {
+.scroller-3X7KbA {
     background-color: var(--CC-serverlist-background-color) !important;
 }
 
-/* member card */
+/* jump to present bar background */
 
-.userPopout-3XzG_A {
-    background-color: hsl(var(--CC-bar-color));
+.jumpToPresentBar-1cEnH0 {
+    background-color: var(--CC-input-field-background-color);
+}
+
+/* account rectangle at the bottom */ 
+
+.container-YkUktl {
+    background-color: var(--CC-input-field-background-color) !important;
+}
+
+.container-1zzFcN {
+    background-color: var(--CC-input-field-background-color) !important;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.actionButtons-2vEOUh * {
+    background-color: var(--CC-input-field-background-color) !important;
+}
+
+button[aria-label="Noise Suppression powered by RNNoise"] {
+    display: none;
+}
+
+.horizontal-112GEH>.flex-2S1XBF, .horizontal-112GEH>.flexChild-3PzYmX {
+    margin: 0;
+    padding-right: 2px;
+}
+
+.flex-2S1XBF {
+    flex-direction: row-reverse;
+}
+
+/* embeds */
+
+.embedFull-1HGV2S {
+    background-color: var(--CC-bar-color);
+    border-left: var(--CC-bar-color);
+}
+
+.chat-2ZfjoI {
+    background-color: var(--CC-background-color);
 }
 
 /*member list*/
 
-.membersWrap-2h-GB4.hiddenMembers-2dcs_q {
+.membersWrap-3NUR2t.hiddenMembers-8kpYM0, .members-3WRCEx {
     background-color: var(--CC-bar-color) !important;
     min-width: unset;
     width: 50px;
     padding-left: 0px;
     justify-content: right;
     transition: width var(--CC-animation-speed);
+    min-height: 100%;
+    padding-top: 3px;
 }
 
-.membersGroup-v9BXpm.container-2ax-kl {
-    animation: member-list-header-minimize var(--CC-animation-speed) ease-out;
-    height: 0px;
-    padding: 0px;
-}
-
-.membersWrap-2h-GB4.hiddenMembers-2dcs_q:hover .membersGroup-v9BXpm.container-2ax-kl {
-    animation: member-list-header-expand calc(var(--CC-animation-speed)) ease-in;
-    height: 16px;
-    padding: 24px;
-}
-
-@keyframes member-list-header-expand {
-    from {
-        height: 0px;
-        padding: 0px;
-    } to {
-        height: 16px;
-        padding: 24px;
-    }
-}
-
-@keyframes member-list-header-minimize {
-    from {
-        height: 16px;
-        padding: 24px;
-    } to {
-        height: 0px;
-        padding: 0px;
-    }
-}
-
-.member-3-YXUe {
+.member-2gU6Ar {
     margin-left: 0px;
 }
 
-.membersWrap-2h-GB4.hiddenMembers-2dcs_q:hover {
+.membersWrap-3NUR2t.hiddenMembers-8kpYM0:hover .membersGroup-2eiWxl.container-q97qHp {
+    display: block;
+    height: unset;
+    padding: 5px 0 5px 10px;
+}
+
+.membersWrap-3NUR2t.hiddenMembers-8kpYM0:hover, .membersWrap-3NUR2t.hiddenMembers-8kpYM0:hover .members-3WRCEx {
     width: 240px;
 }
 
 /*chat input field */
 
-.channelTextArea-rNsIhG {
+.channelTextArea-1FufC0 {
     background-color: var(--CC-input-field-background-color);
     margin-bottom: 0;
     padding-bottom: 24px;
 }
 
-.form-2fGMdU {
+.form-3gdLxP {
     padding: 0px;
 }
 
-.channelTextArea-rNsIhG.channelTextArea-2VhZ6z,
-.scrollableContainer-2NUZem.webkit-HjD9Er
+.channelTextArea-1FufC0.channelTextArea-1VQBuV,
+.scrollableContainer-15eg7h
 {
     border-radius: 0;
 }
 
-.scrollableContainer-2NUZem {
+.scrollableContainer-15eg7h {
     background-color: inherit;
 }
 
-.scrollerSpacer-avRLaA {
+.scrollerSpacer-3AqkT9 {
     height: 10px;
 }
 
 /* message background */
 
-.messagesWrapper-1sRNjr {
+.messagesWrapper-RpOMA3 {
     background: var(--CC-background-color);
-}
-
-.scroller-2LSbBU::-webkit-scrollbar {
-    background-color: var(--CC-background-color);
 }
 
 /*extend top bar on top of channel list*/
 
-.title-3qD0b-,
-.container-1r6BKw,
-.libraryHeader-3g95kE
+.title-31SJ6t,
+.container-ZMc96U
 {
     background: var(--CC-bar-color) !important;
     width: calc(100% + 50px);
@@ -120,24 +131,23 @@
     transition: margin-left var(--CC-animation-speed), width var(--CC-animation-speed);
 }
 
-.sidebar-2K8pFh:hover ~ .chat-3bRxxu .title-3qD0b-.container-1r6BKw,
-.sidebar-2K8pFh:hover ~ .container-1D34oG .container-1r6BKw,
-.sidebar-2K8pFh:hover ~ .container-3Mxszk .libraryHeader-3g95kE,
-.sidebar-2K8pFh:hover ~ .applicationStore-1pNvnv .headerBar-1YYOfi
+.sidebar-1tnWFu:hover ~ .chat-2ZfjoI .title-31SJ6t.container-ZMc96U,
+.sidebar-1tnWFu:hover ~ .container-1D34oG .container-1r6BKw,
+.sidebar-1tnWFu:hover ~ .container-3Mxszk .libraryHeader-3g95kE
 {
     margin-left: -240px;
     width: calc(100% + 240px);
 }
 
-.chat-3bRxxu {
+.chat-2ZfjoI {
     overflow: unset;
 }
 
-.children-19S4PO {
+.children-3xh0VB {
     margin: 0px;
 }
 
-.children-19S4PO:after {
+.children-3xh0VB:after {
     display: none;
 }
 
@@ -150,51 +160,59 @@
 
 /* home page */
 
-.tabBody-3YRQ8W {
+.tabBody-2dgbAs {
     background: var(--CC-background-color);
 }
 
-.container-1D34oG {
+.container-2cd8Mz {
     background-color: rgba(0,0,0,0) !important;
-}
-
-/* library page */
-
-.container-19hC9u {
-    background: var(--CC-background-color);
-}
-
-.header-39GIC8 {
-    background: none;
 }
 
 /* nitro page */
 
-.scroller-9moviB {
+.scroller-29cQFV {
     background-color: var(--CC-background-color);
 }
 
 /*friend list*/
 
-.content-3YMskv a {
+.content-yjf30S a {
     margin-left: 0;
 }
 
-.privateChannelsHeaderContainer-3NB1K1 {
+.privateChannelsHeaderContainer-1UWASm {
     padding-left: 15px;
 }
 
-.privateChannelRecipientsInviteButtonIcon-3A3uTc[aria-label="Create DM"] {
-    margin-right: 4px;
+.privateChannelRecipientsInviteButtonIcon-1ObKXK[aria-label="Create DM"] {
+    margin-right: 4px !important;
 }
 
-.searchBar-6Kv8R2 {
+.searchBar-2aylmZ {
     display: var(--CC-search-in-friendlist);
+}
+
+/* friends and nitro page */
+
+.container-2cd8Mz {
+    overflow: visible;
+}
+
+.channel-1Shao0 {
+    margin-left: 0;
+}
+
+.sidebar-1tnWFu:hover .scroller-WSmht3 {
+    padding-right: 16px !important;
+}
+
+.scroller-WSmht3 {
+    padding-right: 0 !important;
 }
 
 /* channel list */
 
-.sidebar-2K8pFh {
+.sidebar-1tnWFu {
     background: var(--CC-bar-color) !important;
     margin-top: 48px;
     min-width: unset;
@@ -204,11 +222,11 @@
     transition: width var(--CC-animation-speed);
 }
 
-.sidebar-2K8pFh:hover {
+.sidebar-1tnWFu:hover {
     width: 240px;
 }
 
-.containerDefault-3tr_sE {
+.scroller-WSmht3 {
     overflow: hidden;
     height: 0px;
     padding: 0px;
@@ -216,7 +234,7 @@
     animation-duration: var(--CC-animation-speed);
 }
 
-.sidebar-2K8pFh:hover .containerDefault-3tr_sE {
+.sidebar-1tnWFu:hover .scroller-WSmht3 {
     height: 24px;
     padding: 16px;
     animation-name: channel-list-header-expand;
@@ -243,12 +261,31 @@
     }
 }
 
-.button-1w5pas {
-    margin-left: 0px;
-    padding-right: 4px;
+.button-2BMPJJ {
+    margin-left: unset;
 }
 
-.sidebar-2K8pFh:hover .children-3rEycc {
+.containerDefault-3TQ5YN, 
+.children-1MGS9G,
+.nameTag-sc-gpq {
+    display: none;
+}
+
+.iconContainer-21RCa3 {
+    margin-right: 0;
+}
+
+.sidebar-1tnWFu:hover .iconContainer-21RCa3 {
+    margin-right: 6px;
+}
+
+.sidebar-1tnWFu:hover .children-1MGS9G,
+.sidebar-1tnWFu:hover .containerDefault-3TQ5YN
+{
+    display: flex;
+}
+
+.sidebar-1tnWFu:hover .nameTag-sc-gpq {
     display: block;
 }
 
@@ -256,16 +293,8 @@
 
 .chat-3bRxxu, 
 .threadSidebar-1o3BTy, 
-.content-yTz4x3,
-.container-3w7J-x,
-.panels-j1Uci_,
-.privateChannels-1nO12o, .searchBar-6Kv8R2,
-.scroller-1JbKMe,
-.members-1998pB, .members-1998pB>div,
-.applicationStore-1pNvnv,
-.headerNormal-T_seeN,
-.body-3iLsc4,
-.footer-1fjuF6
+.container-1NXEtd,
+.member-48YF_l
 {
     background: none !important;
 }
@@ -280,12 +309,10 @@
     padding-left: 5px;
 }
 
-.children-3rEycc,
-.icon-3Oovq9,
-.bannerImage-3KhIJ6,
-.animatedContainer-1NSq4T,
-.content-3YMskv > div[style="height: 84px;"],
-.content-3YMskv > div[style="height: 16px;"]
+.container-2giAcK,
+.guildIconContainer-3QvE6w,
+.scroller-kQBbkU::-webkit-scrollbar,
+.membersGroup-2eiWxl.container-q97qHp
 {
     display: none;
 }
